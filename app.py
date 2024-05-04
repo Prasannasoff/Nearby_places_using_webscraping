@@ -28,6 +28,8 @@ def get_nearby_hospitals(place_name):
         page_source = driver.page_source
         soup = BeautifulSoup(page_source, 'html.parser')
 
+
+        #list to store the values
         hospitals = []
 
        

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <style>
+        /* Resetting default margin and padding */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Applying styles to the search results container */
+ul {
+    list-style: none;
+}
+
+/* Styling individual search result items */
+li {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Styling headings */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Styling individual result item details */
+strong {
+    font-weight: bold;
+}
+
+/* Styling the name of the hospital */
+h2 {
+    margin-bottom: 5px;
+}
+
+/* Styling the rating */
+.rating {
+    color: #FFD700; /* Gold color */
+}
+
+/* Styling the address */
+.address {
+    color: #555;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Search Results</h1>
+    <ul>
+        {% for hospital in hospitals %}
+            <li>
+                <strong>Name:</strong> {{ hospital['name'] }}<br>
+                <strong>Rating:</strong> {{ hospital['rating'] }}<br>
+                <strong>Address:</strong> {{ hospital['address'] }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

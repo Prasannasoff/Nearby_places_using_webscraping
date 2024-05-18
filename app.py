@@ -9,7 +9,8 @@ from bs4 import BeautifulSoup
 app = Flask(__name__)
 
 def get_nearby_hospitals(place_name):
-    driver = webdriver.Chrome()
+    # Initialize Microsoft WebDriver for Edge
+    driver = webdriver.Edge()
     driver.get("https://www.google.com/maps")
 
     try:
